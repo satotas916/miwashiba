@@ -1,0 +1,37 @@
+.c-header {
+  min-width: $pc-width;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $black;
+  &__wrap {
+    display: flex;
+    align-items: center;
+    width: $pc-content-width;
+    margin: 0 auto;
+    padding: 22px 0;
+  }
+  &__logo {
+    width: 196px;
+  }
+  &__nav {
+    margin-left: auto;
+  }
+  &__lists {
+    display: flex;
+    align-items: center;
+  }
+  &__list {
+    &:not(:last-child) {
+      margin-right: 10px;
+      &::after {
+        content: '/';
+        padding: 0 10px;
+        color: $white;
+      }
+    }
+  }
+  &__text {
+    font-size: 16px;
+    color: $white;
+  }
+}

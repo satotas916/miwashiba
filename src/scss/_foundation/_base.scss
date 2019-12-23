@@ -1,0 +1,18 @@
+$pc-width: 1060px;
+$pc-content-width: 960px;
+
+body {
+  background: url(/img/bg.png) repeat;
+}
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+a {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  &:hover {
+    opacity: 0.8;
+  }
+}

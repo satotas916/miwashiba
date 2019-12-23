@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+// foundation
+@import "_foundation/reset";
+@import "_foundation/color";
+@import "_foundation/base";
+
+// layout
+
+// object - component
+@import "_object/_component/header";
+@import "_object/_component/page-top";
