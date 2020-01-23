@@ -8,7 +8,7 @@
     "watch": "watch \"npm run dist\" src/",
     "dist": "npm-run-all dist:**",
     "dist:ejs": "ejs-cli --base-dir src/ejs/ '*.ejs' --out dist/",
-    "dist:sass": "node-sass src/scss/ '/**/*.scss' --output dist/css/ --output-style compressed",
+    "dist:sass": "node-sass src/scss/ '/**/*.scss' --output dist/css/ --output-style compressed --importer node_modules/node-sass-globbing/index.js",
     "dist:copy": "cpx \"src/statics/**/{*.js,*.svg,*.png,*.jpg}\" 'dist/'",
     "build": "npm-run-all build:**",
     "build:sass": "node-sass src/scss/ '/**/*.scss' --output production/css/ --output-style compressed",
@@ -29,6 +29,7 @@
     "cpx": "^1.5.0",
     "ejs-cli": "^2.1.1",
     "node-sass": "^4.13.0",
+    "node-sass-globbing": "0.0.23",
     "npm-run-all": "^4.1.5",
     "watch": "^1.0.2"
   },

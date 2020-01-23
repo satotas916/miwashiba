@@ -1,0 +1,14 @@
+.l-basic {
+  &__main {
+    @include pc {
+      width: $pc-width;
+      margin: 0 auto;
+    }
+  }
+  &__contents {
+    @include pc {
+      width: $pc-content-width;
+      margin: 0 auto;
+    }
+  }
+}

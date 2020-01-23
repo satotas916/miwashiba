@@ -7,7 +7,7 @@
 @import "_foundation/_lib/swiper.min";
 
 // layout
+@import "_layout/**";
 
-// object - component
-@import "_object/_component/header";
-@import "_object/_component/page-top";
+// object
+@import "_object/**/**";

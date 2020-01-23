@@ -1,5 +1,15 @@
 $pc-width: 1060px;
 $pc-content-width: 960px;
+$break-point: 320;
+
+@mixin pc {
+  @media screen and (min-width: 680px) {
+    @content;
+  }
+}
+@function get_vw($px) {
+  @return ($px * 100) / $break-point * 1vw;
+}
 
 body {
   background: url(/img/bg.png) repeat;
