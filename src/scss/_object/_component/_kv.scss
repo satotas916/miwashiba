@@ -1,0 +1,29 @@
+.c-kv {
+  &__menu {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 892px;
+    margin: 0 auto;
+    z-index: 100;
+  }
+  &__menu-list {
+    width: 166px;
+    transition: transform 0.2s ease;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    a:hover {
+      opacity: 1;
+    }
+    &:hover {
+      transform: scale(1.04);
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-top: 60px;
+    }
+  }
+}

@@ -1,20 +1,40 @@
-<div class="swiper-container">
+<%
+  const menu = [
+    { name: 'TOP', img: '/img/menu_top.svg' },
+    { name: 'TOP', img: '/img/menu_top.svg' },
+    { name: 'TOP', img: '/img/menu_top.svg' },
+    { name: 'TOP', img: '/img/menu_top.svg' }
+  ]
+-%>
+<div class="c-kv swiper-container">
   <div class="swiper-wrapper">
+    <% for(i = 0; i < 5; i++) { %>
     <div class="swiper-slide">
       <img src="/img/kv_01.jpg" alt="" width="960" height="405" />
     </div>
-    <div class="swiper-slide">
-      <img src="/img/kv_02.jpg" alt="" width="960" height="405" />
-    </div>
-    <div class="swiper-slide">
-      <img src="/img/kv_03.jpg" alt="" width="960" height="405" />
-    </div>
-    <div class="swiper-slide">
-      <img src="/img/kv_04.jpg" alt="" width="960" height="405" />
-    </div>
-    <div class="swiper-slide">
-      <img src="/img/kv_05.jpg" alt="" width="960" height="405" />
-    </div>
+    <% } %>
   </div>
   <div class="swiper-pagination"></div>
+  <ul class="c-kv__menu">
+    <li class="c-kv__menu-list">
+      <a href="/">
+        <img src="/img/menu_top.svg" alt="TOP" />
+      </a>
+    </li>
+    <li class="c-kv__menu-list">
+      <a href="/gallery/">
+        <img src="/img/menu_gallery.svg" alt="GALLERY" />
+      </a>
+    </li>
+    <li class="c-kv__menu-list">
+      <a href="/works/">
+        <img src="/img/menu_works.svg" alt="WORKS" />
+      </a>
+    </li>
+    <li class="c-kv__menu-list">
+      <a href="/other/">
+        <img src="/img/menu_other.svg" alt="OTHER" />
+      </a>
+    </li>
+  </ul>
 </div>
