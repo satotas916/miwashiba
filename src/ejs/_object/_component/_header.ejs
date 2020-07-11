@@ -1,3 +1,11 @@
+<%
+  const menu = [
+    { name: 'TOP', img: '/img/menu_top.svg', link: '/' },
+    { name: 'GALLERY', img: '/img/menu_gallery.svg', link: '/gallery/' },
+    { name: 'WORKS', img: '/img/menu_works.svg', link: '/works/' },
+    { name: 'OTHER', img: '/img/menu_other.svg', link: '/other/' }
+  ]
+-%>
 <header class="c-header">
   <div class="c-header__wrap">
     <h1 class="c-header__logo">
@@ -5,18 +13,11 @@
     </h1>
     <nav class="c-header__nav">
       <ul class="c-header__lists">
+        <% menu.forEach(e => { -%>
         <li class="c-header__list">
-          <a href="/" class="c-header__text">TOP</a>
+          <a href="<%= e.link %>" class="c-header__text"><%= e.name %></a>
         </li>
-        <li class="c-header__list">
-          <a href="/gallery/" class="c-header__text">GALLERY</a>
-        </li>
-        <li class="c-header__list">
-          <a href="/works/" class="c-header__text">WORKS</a>
-        </li>
-        <li class="c-header__list">
-          <a href="/other/" class="c-header__text">OTHER</a>
-        </li>
+        <% }); %>
       </ul>
     </nav>
   </div>

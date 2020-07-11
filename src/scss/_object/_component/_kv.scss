@@ -1,11 +1,13 @@
 .c-kv {
   &__menu {
     position: absolute;
+    left: 50%;
     bottom: 30px;
     display: flex;
     justify-content: space-between;
     width: 892px;
     margin: 0 auto;
+    transform: translateX(-50%);
     z-index: 100;
   }
   &__menu-list {

@@ -27,7 +27,7 @@
     display: none;
     @include pc {
       display: block;
-      margin-left: auto;
+      margin: 12px 0 0 auto;
     }
   }
   &__lists {
@@ -39,13 +39,14 @@
       margin-right: 10px;
       &::after {
         content: "/";
-        padding: 0 10px;
+        padding: 0 4px;
         color: $white;
       }
     }
   }
   &__text {
-    font-size: 16px;
+    font-size: 18px;
+    font-family: "Cormorant", serif;
     color: $white;
   }
 }

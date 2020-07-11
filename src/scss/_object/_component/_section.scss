@@ -1,0 +1,16 @@
+.c-section {
+  padding: 40px 80px;
+  background-color: $white;
+  &:not(:first-of-type) {
+    margin-top: 50px;
+  }
+  &__title {
+    font-size: 60px;
+    font-weight: normal;
+    font-family: "Cormorant", serif;
+    color: $black;
+    &--center {
+      text-align: center;
+    }
+  }
+}

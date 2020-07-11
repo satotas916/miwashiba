@@ -1,0 +1,29 @@
+.p-profile {
+  &__container {
+    display: flex;
+  }
+  &__thumbnail {
+    position: relative;
+    display: inline-block;
+    padding: 0 34px 34px 0;
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      content: "";
+      display: block;
+      width: 200px;
+      height: 200px;
+      background-color: #eee;
+    }
+  }
+  &__icon {
+    position: relative;
+    width: 200px;
+    z-index: 1;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

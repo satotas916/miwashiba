@@ -1,0 +1,53 @@
+<%
+  const links = [
+    { name: 'pixiv', link: 'https://www.pixiv.net/member.php?id=2550807' },
+    { name: 'pixivFANBOX', link: 'https://www.pixiv.net/fanbox/creator/2550807' },
+    { name: 'niconico', link: 'https://www.nicovideo.jp/user/21427527/' },
+    { name: 'Tumblr', link: 'https://miwashiiba.tumblr.com' },
+    { name: 'Steam', link: 'https://store.steampowered.com/search/?term=miwashiba' },
+    { name: 'BOOTH', link: 'https://miwasiba.booth.pm' }
+  ]
+-%>
+<div class="p-profile">
+  <div class="p-profile__container">
+    <div class="p-profile__about">
+      <div class="p-profile__name">
+        <p class="p-profile__name-main">△◯□×</p>
+        <p class="p-profile__name-sub">- miwashiba -</p>
+      </div>
+      <ul class="p-profile__list">
+        <% links.forEach(e => { -%>
+        <li class="p-profile__item">
+          <a href="<%= e.link %>" target="_blank" class="p-profile__link"><%= e.name %></a>
+        </li>
+        <% }); %>
+      </ul>
+    </div>
+    <div class="p-profile__thumbnail">
+      <div class="p-profile__icon">
+        <img src="/img/profile-icon.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <p class="p-profile__text">
+    実家の手伝いをしつつフリーでイラストレーターをしています。<br>
+    絵を描いたり他には動画を作ったり。色々挑戦したい。
+  </p>
+            <!--<h2><img src="images/about.png" alt="about" /></h2>
+            <div class="text">
+              <p>△○□×（みわ しいば）</p>
+              <p>４月２２日 / A型 / 福岡</p>
+              
+            </div>
+          </div>
+          <div class="sub2 box">
+            <h2><img src="images/soft.png" alt="soft" /></h2>
+            <div class="text">
+              <p>使用ソフト</p>
+              <p>photoshop CS6 / SAI</p>
+              <p>CLIPStudioPaint EX</p>
+              <p>After Effect CS6</p>
+              <p>AviUtl / つんでれんこ</p>
+            </div>
+          </div>-->
+</div>
