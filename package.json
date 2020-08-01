@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=develop npm-run-all dist -p server watch",
-    "watch": "watch \"npm run dist\" src/",
-    "dist": "npm-run-all dist:**",
-    "dist:ejs": "ejs-cli --base-dir src/ejs/ '*.ejs' --out dist/",
-    "dist:sass": "node-sass src/scss/ '/**/*.scss' --output dist/css/ --output-style compressed --importer node_modules/node-sass-globbing/index.js",
-    "dist:copy": "cpx \"src/statics/**/{*.js,*.svg,*.png,*.jpg}\" 'dist/'",
+    "start": "NODE_ENV=develop npm-run-all build -p server watch",
+    "server": "browser-sync start --server './dist/' --files './dist/**'",
+    "watch": "watch \"npm run build\" src/",
     "build": "npm-run-all build:**",
-    "build:sass": "node-sass src/scss/ '/**/*.scss' --output production/css/ --output-style compressed",
-    "server": "browser-sync start --server './dist/' --files './dist/**'"
+    "build:ejs": "ejs-cli --base-dir src/ejs/ '*.ejs' --out dist/",
+    "build:sass": "node-sass src/scss/ '/**/*.scss' --output dist/css/ --output-style compressed --importer node_modules/node-sass-globbing/index.js",
+    "build:js": "webpack",
+    "build:copy": "cpx \"src/statics/**/{*.js,*.svg,*.png,*.jpg}\" 'dist/'",
+    "clean": "rimraf dist/**/* && rimraf production/**/*",
+    "clean:html": "rimraf production/**/*.html",
+    "production": "NODE_ENV=production npm-run-all clean clean:html -p build -p cp-dist",
+    "cp-dist": "cpx \"dist/**/*\" 'production/'"
   },
   "repository": {
     "type": "git",
@@ -31,11 +34,16 @@
     "node-sass": "^4.13.0",
     "node-sass-globbing": "0.0.23",
     "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.6",
     "watch": "^1.0.2"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "fs": "0.0.1-security",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }
