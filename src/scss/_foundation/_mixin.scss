@@ -1,0 +1,27 @@
+@mixin wide {
+  @media screen and (min-width: $pc-w-px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: $tablet-w-px) {
+    @content;
+  }
+}
+
+// @mixin pc {
+//   @media screen and (min-width: 680px) {
+//     @content;
+//   }
+// }
+// @function get_vw($px) {
+//   @return ($px * 100) / $break-point * 1vw;
+// }
+
+@function pcpx($px) {
+  @return #{$px}px;
+}
+
+@function pcvw($px) {
+  @return $px / $pc-wrap-w * 100vw;
+}

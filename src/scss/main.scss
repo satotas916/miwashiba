@@ -1,6 +1,8 @@
 @charset "utf-8";
 
 // foundation
+@import "_foundation/variables";
+@import "_foundation/mixin";
 @import "_foundation/reset";
 @import "_foundation/base";
 @import "_foundation/color";
