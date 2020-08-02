@@ -1,9 +1,9 @@
 .l-basic {
   &__main {
-    width: $pc-container-w-px;
+    width: $pc-w-px;
     margin: 0 auto;
     @include wide {
-      width: pcvw($pc-container-w);
+      width: pcvw($pc-w);
     }
     @include sp {
       width: 100%;

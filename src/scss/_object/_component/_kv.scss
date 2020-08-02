@@ -1,21 +1,30 @@
 .c-kv {
   &__menu {
+    $b: 30;
+    $w: 892;
     position: absolute;
     left: 50%;
-    bottom: 30px;
+    bottom: pcpx($b);
     display: flex;
     justify-content: space-between;
-    width: 892px;
+    width: pcpx($w);
     margin: 0 auto;
     transform: translateX(-50%);
     z-index: 100;
+    @include wide {
+      bottom: pcvw($b);
+      width: pcvw($w);
+    }
+    @include sp {
+      display: none;
+    }
   }
   &__menu-list {
-    width: 166px;
+    $w: 166;
+    width: pcpx($w);
     transition: transform 0.2s ease;
-    img {
-      width: 100%;
-      height: auto;
+    @include wide {
+      width: pcvw($w);
     }
     a:hover {
       opacity: 1;
@@ -25,7 +34,11 @@
     }
     &:nth-child(2),
     &:nth-child(3) {
-      margin-top: 60px;
+      $mt: 60;
+      margin-top: pcpx($mt);
+      @include wide {
+        margin-top: pcvw($mt);
+      }
     }
   }
 }

@@ -59,10 +59,6 @@
   }
   &__list {
     &:not(:last-child) {
-      margin-right: 10px;
-      @include wide {
-        margin: pcvw(10) 0 0 auto;
-      }
       &::after {
         content: "/";
         padding: 0 4px;
