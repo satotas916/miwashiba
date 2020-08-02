@@ -1,17 +1,32 @@
 .l-basic {
   &__main {
-    @include pc {
-      width: $pc-width;
-      margin: 0 auto;
+    width: $pc-container-w-px;
+    margin: 0 auto;
+    @include wide {
+      width: pcvw($pc-container-w);
+    }
+    @include sp {
+      width: 100%;
     }
   }
   &__contents {
-    @include pc {
-      width: $pc-content-width;
-      margin: 0 auto;
+    width: $pc-wrap-w-px;
+    margin: 0 auto;
+    @include wide {
+      width: pcvw($pc-wrap-w);
+    }
+    @include sp {
+      width: auto;
     }
   }
   &__kv {
-    margin: 40px 0;
+    $mt: 40;
+    margin: pcpx($mt) 0;
+    @include wide {
+      margin: pcvw($mt) 0;
+    }
+    @include sp {
+      margin: 16px 0 24px;
+    }
   }
 }

@@ -3,8 +3,21 @@
     @content;
   }
 }
-@mixin tablet {
+
+@mixin pc {
   @media screen and (min-width: $tablet-w-px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablet-w-px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: $sp-w-px) {
     @content;
   }
 }
