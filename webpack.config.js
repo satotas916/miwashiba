@@ -7,6 +7,20 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist/js"),
   },
+  module: {
+    rules: [
+      {
+        test: /\.ts$/,
+        use: "ts-loader",
+      },
+    ],
+  },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src/ts"),
+    },
+    extensions: [".ts", "js"],
+  },
 };
 
 if (process.env.NODE_ENV !== "production") {
