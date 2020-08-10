@@ -1,13 +1,5 @@
 .l-basic {
   &__main {
-    width: $pc-w-px;
-    margin: 0 auto;
-    @include wide {
-      width: pcvw($pc-w);
-    }
-    @include sp {
-      width: 100%;
-    }
   }
   &__contents {
     width: $pc-wrap-w-px;
@@ -26,7 +18,34 @@
       margin: pcvw($mt) 0;
     }
     @include sp {
-      margin: 16px 0 24px;
+      $mt: 16;
+      $mb: 24;
+      margin: spvw($mt) 0 spvw($mb);
+    }
+  }
+  &__page-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+    @include sp {
+      display: none;
+    }
+  }
+  &__footer {
+    $mt: 74;
+    margin-top: pcpx($mt);
+    @include wide {
+      margin-top: pcvw($mt);
+    }
+    @include sp {
+      $mt: 40;
+      margin-top: spvw(40);
     }
   }
 }

@@ -7,14 +7,26 @@
     { name: 'Steam', link: 'https://store.steampowered.com/search/?term=miwashiba' },
     { name: 'BOOTH', link: 'https://miwasiba.booth.pm' }
   ]
+  const profile = [
+    { term: '誕生日', data: '4月22日' },
+    { term: '血液型', data: 'A型' },
+    { term: '出身地', data: '福岡' },
+    { class: 'soft', term: '使用ソフト', data: 'photoshop CS6 / SAI / CLIPStudioPaint EX / After Effect CS6 / AviUtl / つんでれんこ' }
+  ]
 -%>
 <div class="p-profile">
   <div class="p-profile__container">
     <div class="p-profile__about">
-      <div class="p-profile__name">
-        <p class="p-profile__name-main">△◯□×</p>
-        <p class="p-profile__name-sub">- miwashiba -</p>
-      </div>
+      <h3 class="p-profile__name">
+        △◯□×
+        <span>- miwashiba -</span>
+      </h3>
+      <dl class="p-profile__dl">
+        <% profile.forEach(e => { -%>
+        <dt class="<%= e.class %>"><%= e.term %></dt>
+        <dd><%= e.data %></dd>
+        <% }); %>
+      </dl>
       <ul class="p-profile__list">
         <% links.forEach(e => { -%>
         <li class="p-profile__item">
@@ -22,6 +34,10 @@
         </li>
         <% }); %>
       </ul>
+      <p class="p-profile__text">
+        実家の手伝いをしつつフリーでイラストレーターをしています。<br>
+        絵を描いたり他には動画を作ったり。色々挑戦したい。
+      </p>
     </div>
     <div class="p-profile__thumbnail">
       <div class="p-profile__icon">
@@ -29,25 +45,4 @@
       </div>
     </div>
   </div>
-  <p class="p-profile__text">
-    実家の手伝いをしつつフリーでイラストレーターをしています。<br>
-    絵を描いたり他には動画を作ったり。色々挑戦したい。
-  </p>
-            <!--<h2><img src="images/about.png" alt="about" /></h2>
-            <div class="text">
-              <p>△○□×（みわ しいば）</p>
-              <p>４月２２日 / A型 / 福岡</p>
-              
-            </div>
-          </div>
-          <div class="sub2 box">
-            <h2><img src="images/soft.png" alt="soft" /></h2>
-            <div class="text">
-              <p>使用ソフト</p>
-              <p>photoshop CS6 / SAI</p>
-              <p>CLIPStudioPaint EX</p>
-              <p>After Effect CS6</p>
-              <p>AviUtl / つんでれんこ</p>
-            </div>
-          </div>-->
 </div>

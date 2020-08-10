@@ -1,14 +1,43 @@
 .c-section {
-  padding: 40px 80px;
+  $pt: 40;
+  $pr: 80;
+  padding: pcpx($pt) pcpx($pr);
   background-color: $white;
+  @include wide {
+    padding: pcvw($pt) pcvw($pr);
+  }
+  @include sp {
+    $pt: 16;
+    $pb: 32;
+    $mr: 16;
+    margin: 0 spvw($mr);
+    padding: spvw($pt) spvw($pt) spvw($pb);
+  }
   &:not(:first-of-type) {
-    margin-top: 50px;
+    $mt: 50;
+    margin-top: pcpx($mt);
+    @include wide {
+      margin-top: pcvw($mt);
+    }
+    @include sp {
+      $mt: 24;
+      margin-top: spvw($mt);
+    }
   }
   &__title {
-    font-size: 60px;
+    $fz: 60;
+    font-size: pcpx($fz);
     font-weight: normal;
     font-family: "Cormorant", serif;
     color: $black;
+    @include wide {
+      font-size: pcvw($fz);
+    }
+    @include sp {
+      $fz: 32;
+      font-size: spvw($fz);
+      text-align: center;
+    }
     &--center {
       text-align: center;
     }

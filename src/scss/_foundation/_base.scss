@@ -1,5 +1,15 @@
 body {
+  width: $pc-w-px;
   background: url(/img/bg.png) repeat;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic",
+    Verdana, Meiryo, sans-serif;
+  @include wide {
+    width: pcvw($pc-w);
+  }
+  @include sp {
+    width: 100%;
+  }
 }
 * {
   box-sizing: border-box;
@@ -13,4 +23,15 @@ li {
 }
 a {
   text-decoration: none;
+}
+.sp-only {
+  display: none;
+  @include sp {
+    display: block;
+  }
+}
+.pc-only {
+  @include sp {
+    display: none;
+  }
 }

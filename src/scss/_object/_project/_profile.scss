@@ -1,29 +1,209 @@
 .p-profile {
+  $mt: 40;
+  margin-top: pcpx($mt);
+  @include wide {
+    margin-top: pcpx($mt);
+  }
+  @include sp {
+    $mt: 16;
+    margin-top: spvw($mt);
+  }
   &__container {
     display: flex;
+    align-items: flex-start;
+    @include sp {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
   }
   &__thumbnail {
+    $mt: 32;
+    $pr: 34;
+    $pb: 34;
     position: relative;
-    display: inline-block;
-    padding: 0 34px 34px 0;
+    margin: pcpx($mt) 0 0 auto;
+    padding: 0 pcpx($pr) pcpx($pb) 0;
+    @include wide {
+      padding: 0 pcvw($pr) pcvw($pb) 0;
+    }
+    @include sp {
+      margin: 0;
+      padding: 0;
+    }
     &::after {
+      $w: 200;
+      $h: 200;
+      content: "";
+      display: block;
       position: absolute;
       right: 0;
       bottom: 0;
-      content: "";
-      display: block;
-      width: 200px;
-      height: 200px;
+      width: pcpx($w);
+      height: pcpx($h);
       background-color: #eee;
+      @include wide {
+        width: pcvw($w);
+        height: pcvw($h);
+      }
+      @include sp {
+        display: none;
+      }
     }
   }
   &__icon {
+    $w: 200;
     position: relative;
-    width: 200px;
+    width: pcpx($w);
     z-index: 1;
+    @include wide {
+      width: pcvw($w);
+    }
+    @include sp {
+      $w: 136;
+      width: spvw($w);
+    }
     img {
+      vertical-align: bottom;
+    }
+  }
+  &__about {
+    $w: 460;
+    width: pcpx($w);
+    @include wide {
+      width: pcvw($w);
+    }
+    @include sp {
+      $mt: 16;
       width: 100%;
-      height: auto;
+      margin-top: spvw($mt);
+    }
+  }
+  &__name {
+    $fz: 26;
+    display: flex;
+    align-items: center;
+    font-size: pcpx($fz);
+    font-weight: bold;
+    @include wide {
+      font-size: pcvw($fz);
+    }
+    @include sp {
+      $fz: 20;
+      font-size: spvw(20);
+      flex-direction: column;
+    }
+    span {
+      $ml: 26;
+      $fz: 16;
+      margin-left: pcpx($ml);
+      font-size: pcpx($fz);
+      font-weight: normal;
+      @include wide {
+        margin-left: pcvw($ml);
+        font-size: pcvw($fz);
+      }
+      @include sp {
+        $mt: 4;
+        $fz: 12;
+        margin: spvw($mt) 0 0;
+        font-size: spvw($fz);
+      }
+    }
+  }
+  &__dl {
+    $mt: 16;
+    $fz: 16;
+    margin-top: pcpx($mt);
+    font-size: pcpx($fz);
+    line-height: 2;
+    @include wide {
+      margin-top: pcvw($mt);
+      font-size: pcvw($fz);
+    }
+    @include sp {
+      $mt: 14;
+      $fz: 12;
+      margin-top: spvw($mt);
+      font-size: spvw($fz);
+      line-height: 2;
+    }
+    dt {
+      $w: 96;
+      float: left;
+      width: pcpx($w);
+      font-weight: bold;
+      @include wide {
+        width: pcvw($w);
+      }
+      @include sp {
+        $mw: 60;
+        width: auto;
+        min-width: spvw($mw);
+      }
+      &.soft {
+        float: none;
+        width: 100%;
+      }
+    }
+  }
+  &__list {
+    $w: 280;
+    $mt: 32;
+    display: flex;
+    flex-wrap: wrap;
+    width: pcpx($w);
+    margin-top: pcpx($mt);
+    @include wide {
+      width: pcvw($w);
+      margin-top: pcvw($mt);
+    }
+    @include sp {
+      $mt: 14;
+      width: 100%;
+      margin-top: spvw($mt);
+    }
+  }
+  &__item {
+    $fz: 16;
+    display: flex;
+    font-size: pcpx($fz);
+    line-height: 2;
+    @include wide {
+      font-size: pcvw($fz);
+    }
+    @include sp {
+      $fz: 12;
+      font-size: spvw($fz);
+      line-height: 1.4;
+    }
+    &:not(:last-child):after {
+      content: "/";
+      margin: 0 0.5em;
+    }
+  }
+  &__link {
+    color: $link;
+    transition: opacity 0.2s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__text {
+    $mt: 32;
+    $fz: 16;
+    margin-top: pcpx($mt);
+    font-size: pcpx($fz);
+    line-height: 2;
+    @include wide {
+      margin-top: pcvw($mt);
+      font-size: pcvw($fz);
+    }
+    @include sp {
+      $mt: 16;
+      $fz: 12;
+      margin-top: spvw($mt);
+      font-size: spvw($fz);
+      line-height: 1.6;
     }
   }
 }

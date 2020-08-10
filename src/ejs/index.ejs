@@ -20,53 +20,17 @@
           <%- include('./_object/_project/_profile.ejs') %>
         </section>
 
-        <section class="wrap">
-          <!--記事1-->
-          <div class="topsub box">
-            <div class="text">
-              <p>
-                <span
-                  >何か御座いましたら下記のCONTACTのアドレスへお願い致します</span
-                >
-              </p>
-              <p>※個人依頼はお知り合いかその繋がりの方のみとしております</p>
-              <p>
-                ※動画制作のご依頼は現在停止中です（一枚絵の静止画に歌詞を載せる程度なら可）
-              </p>
-              <p>
-                ※ご連絡の際お手数かと思いますので、宛名は読みの”みわ　しいば”のみで大丈夫です
-              </p>
-              <p>※R-18のご依頼はお受けできません</p>
-              <p>
-                ※お返事が必須なもので、3～4日以内に返信がなければ、お手数お掛け致しますがもう一度送って頂けますと幸いです
-              </p>
-            </div>
-          </div>
-
-          <!--記事4-->
-          <div class="sub3 box">
-            <!--<h2><img src="images/contact.png" alt="contact" /></h2>-->
-            <div class="text">
-              <p><strong>miwa_siba☆hotmail.co.jp(☆→＠)</strong></p>
-              <p>お力添え出来そうなお話がありましたらお願い致します</p>
-              <p>
-                現在<span>【2020年6月中納期】</span>以降のご依頼を募集しております
-              </p>
-              <p>
-                ※上記納期以外でも内容次第ではご相談可能です（イラスト少数制作など）
-              </p>
-              <p>納期や報酬等はご連絡の際にご提示頂けますと大変助かります</p>
-              <p>現在イラストを優先的に、動画のお手伝いは停止中です</p>
-            </div>
-          </div>
+        <section class="c-section">
+          <h2 class="c-section__title">Contact</h2>
+          <%- include('./_object/_project/_contact.ejs') %>
         </section>
       </div>
     </main>
 
-    <div class="c-page-top"><img src="/img/icon_top.svg" alt="" /></div>
+    <div class="l-basic__page-top"><img src="/img/icon_top.svg" alt="" /></div>
 
-    <footer>
-      <p>Copyright &copy;2017 miwashiiba All Rights Reserved.</p>
-    </footer>
+    <div class="l-basic__footer">
+      <%- include('./_object/_component/_footer.ejs') %>
+    </div>
   </body>
 </html>

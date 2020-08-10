@@ -35,5 +35,5 @@
 }
 
 @function spvw($px) {
-  @return $px / $sp-w * 100vw;
+  @return $px / 320 * 100vw;
 }

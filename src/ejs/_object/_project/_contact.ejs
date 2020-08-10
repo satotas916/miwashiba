@@ -1,0 +1,25 @@
+<%
+  const description = [
+    '現在イラストを優先的に、動画のお手伝いは停止中です(一枚絵の静止画に歌詞を載せる程度なら可)',
+    '現在個人依頼は縮小気味です(個人依頼はお知り合いかその繋がりの方のみとしております)',
+    '納期や報酬等はご連絡の際にご提示頂けますと大変助かります',
+    'ご連絡の際お手数かと思いますので、宛名は読みの”みわ しいば”のみで大丈夫です',
+    'R-18のご依頼はお受けできません',
+    'お返事が必須なもので3～4日以内に返信がなければ、お手数お掛け致しますがもう一度送って頂けますと幸いです'
+  ]
+-%>
+<div class="p-contact">
+  <p class="p-contact__text">
+    お力添え出来そうなお話が<br class="sp-only">ありましたらお願い致します
+    <span class="p-contact__mail">miwa_siba☆hotmail.co.jp(☆→＠)</span>
+    <span class="emphasis">現在【2021年1月中納期】以降の<br class="sp-only">ご依頼を募集しております</span><br>
+    <span class="description">※上記納期以外でも内容次第ではご相談可能です<br class="sp-only">(イラスト少数制作など)</span><br>
+    <br>
+    納期や報酬等はご連絡の際にご提示頂けます<br class="sp-only">と大変助かります
+  </p>
+  <ul class="p-contact__list">
+    <% description.forEach(e => { -%>
+    <li class="p-contact__item">※<%= e %></li>
+    <% }); %>
+  </ul>
+</div>
