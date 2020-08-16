@@ -73,8 +73,12 @@
     font-size: 18px;
     font-family: "Cormorant", serif;
     color: $white;
+    transition: opacity 0.2s ease;
     @include wide {
       font-size: pcvw(18);
+    }
+    &:hover {
+      opacity: 0.8;
     }
   }
 }
