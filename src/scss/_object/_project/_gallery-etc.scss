@@ -1,0 +1,37 @@
+.p-gallery-etc {
+  &__container {
+    display: flex;
+  }
+  &__picture {
+    $w: 430;
+    flex-shrink: 0;
+    width: pcpx($w);
+    @include wide {
+      width: pcvw($w);
+    }
+  }
+  &__wrap {
+    $p: 30;
+    padding: pcpx($p);
+    @include wide {
+      padding: pcpx($p);
+    }
+  }
+  &__text {
+    $fz: 14;
+    font-size: pcpx($fz);
+    @include wide {
+      font-size: pcvw($fz);
+    }
+  }
+  &__list {
+    $m: 14;
+    $fz: 14;
+    margin: pcpx($m) 0;
+    font-size: pcpx($fz);
+    @include wide {
+      margin: pcvw($m) 0;
+      font-size: pcvw($fz);
+    }
+  }
+}

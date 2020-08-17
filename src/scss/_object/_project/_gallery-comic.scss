@@ -1,0 +1,15 @@
+.p-gallery-comic {
+  &__title {
+    $mt: 24;
+    $fz: 24;
+    margin: pcpx($mt) 0;
+    font-size: pcpx($fz);
+    font-weight: normal;
+    @include wide {
+      margin: pcvw($mt) 0;
+      font-size: pcvw($fz);
+    }
+  }
+  &__picture {
+  }
+}
