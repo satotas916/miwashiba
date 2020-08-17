@@ -1,0 +1,11 @@
+.p-gallery-image {
+  $mt: 40;
+  margin-top: pcpx($mt);
+  @include wide {
+    margin-top: pcvw($mt);
+  }
+  @include sp {
+    $mt: 24;
+    margin-top: spvw($mt);
+  }
+}

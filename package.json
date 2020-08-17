@@ -8,7 +8,7 @@
     "server": "browser-sync start --server './dist/' --files './dist/**'",
     "watch": "watch \"npm run build\" src/",
     "build": "npm-run-all build:**",
-    "build:ejs": "ejs-cli --base-dir src/ejs/ '*.ejs' --out dist/",
+    "build:ejs": "ejs-cli --base-dir src/ejs/ '**/*.ejs' --out dist/",
     "build:sass": "node-sass src/scss/ '/**/*.scss' --output dist/css/ --output-style compressed --importer node_modules/node-sass-globbing/index.js",
     "build:js": "webpack",
     "build:copy": "cpx \"src/statics/**/{*.js,*.svg,*.png,*.jpg}\" 'dist/'",

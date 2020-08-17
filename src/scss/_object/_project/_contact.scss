@@ -11,7 +11,7 @@
   &__text {
     $fz: 16;
     font-size: pcpx($fz);
-    line-height: 1.6;
+    line-height: 2;
     @include wide {
       font-size: pcvw($fz);
     }

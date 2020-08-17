@@ -1,0 +1,47 @@
+.c-game-box {
+  display: flex;
+  &__picture {
+    $w: 325;
+    display: block;
+    width: pcpx($w);
+    @include wide {
+      width: pcvw($w);
+    }
+  }
+  &__wrap {
+    $p: 30;
+    padding: pcpx($p);
+    @include wide {
+      padding: pcvw($p);
+    }
+  }
+  &__title {
+    $mb: 24;
+    $fz: 24;
+    margin-bottom: pcpx($mb);
+    font-size: pcpx($fz);
+    font-weight: normal;
+    @include wide {
+      margin-bottom: pcvw($mb);
+      font-size: pcvw($fz);
+    }
+  }
+  &__text {
+    $fz: 16;
+    font-size: pcpx($fz);
+    line-height: 2;
+    @include wide {
+      font-size: pcvw($fz);
+    }
+    .emphasis {
+      color: $red;
+    }
+    a {
+      color: $link;
+      transition: opacity 0.2s ease;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
