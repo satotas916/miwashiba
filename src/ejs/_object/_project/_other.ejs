@@ -1,0 +1,52 @@
+<%
+  const others = [
+    {
+      category: 'Goods',
+      items: [
+        {
+          title: 'COMITIA128 Goods',
+          img: '/img/other/comitia128.jpg',
+          text: 'コミティアで頒布した解説本、他グッズです',
+          link: 'https://miwasiba.booth.pm/'
+        },
+        {
+          title: 'Miwashiba tote bag(Halloween ver.)',
+          img: '/img/other/tote-bag.jpg',
+          text: '創作ゲームのトートバッグ（ハロウィーン仕様）です',
+          link: 'https://miwasiba.booth.pm/items/1037056'
+        }
+      ]
+    },
+    {
+      category: 'Book',
+      items: [
+        {
+          title: '合同誌「やみなべ」',
+          img: '/img/other/yaminabe.jpg',
+          text: 'ブレイクショット!７にて発行した同人誌です（販売終了）'
+        }
+      ]
+    }
+  ]
+-%>
+<div class="p-other">
+  <% others.forEach(other => { -%>
+  <div class="c-section__box">
+    <h3 class="c-section__sub-title"><%= other.category %></h3>
+    <% other.items.forEach(el => { -%>
+    <div class="p-other__box">
+      <div class="p-other__picture">
+        <img src="<%= el.img %>" alt="">
+      </div>
+      <h4 class="p-other__title"><%= el.title %></h4>
+      <p class="p-other__text"><%= el.text %></p>
+      <% if(el.link) { -%>
+      <a class="p-other__button" href="<%= el.link %>" target="_blank">
+        購入する
+      </a>
+      <% } %>
+    </div>
+    <% }); %>
+  </div>
+  <% }); %>
+</div>

@@ -8,6 +8,22 @@
     $mt: 24;
     margin-top: spvw($mt);
   }
+  &__text {
+    $mb: 40;
+    $fz: 16;
+    margin-bottom: pcpx($mb);
+    font-size: pcpx($fz);
+    line-height: 2;
+    @include wide {
+      margin-bottom: pcvw($mb);
+      font-size: pcvw($fz);
+    }
+    @include sp {
+      $mb: 24;
+      margin-bottom: spvw($mb);
+      font-size: spvw($fz);
+    }
+  }
   &__box {
     &:not(:last-child) {
       $mb: 40;

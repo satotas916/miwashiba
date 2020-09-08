@@ -1,109 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <title>Star Vlasta</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="css/other.css">
-    <link rel="stylesheet" href="../css/jquery.bxslider.css">
-    <script src="../js/jquery-3.2.1.min.js"></script>
-    <script src="../js/jquery.bxslider.min.js"></script>
-    <script src="../js/jquery.style.js"></script>
-</head>
-<body>
-    
-    <!--ヘッダー-->
-    <header>
-        <!--サイト名-->
-        <h1 class="wrap"><img src="../images/logo.png" alt="Star Vlasta"></h1>
-        
-        <!--モバイルメニュー-->
-        <div class="mobile">
-        <a class="menu-trigger" href="javascript:void(0)" onclick="">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
-        <nav>
-            <ul>
-            <li><a href="../index.html">TOP</a></li>
-            <li><a href="../gallery/index.html">GARARY</a></li>
-            <li><a href="../works/index.html">WORKS</a></li>
-            <li><a href="index.html">OTHER</a></li>
-            </ul>
-        </nav>
-        </div>
-    </header>
-    <!--ヘッダーここまで-->
-    
-    <!--スライド-->
-    <div class="relative wrap">
-    <ul class="bxslider">
-        <li><img src="../images/mainvisual01.jpg" alt="mainvisual01"></li>
-        <li><img src="../images/mainvisual02.jpg" alt="mainvisual02"></li>
-        <li><img src="../images/mainvisual03.jpg" alt="mainvisual03"></li>
-        <li><img src="../images/mainvisual04.jpg" alt="mainvisual04"></li>
-        <li><img src="../images/mainvisual05.jpg" alt="mainvisual05"></li>
-    </ul>
-    <!--スライドメニュー-->
-    <nav class="pc">
-    <p class="menu01 hvr-pulse-grow infinite"><a href="../index.html"><img src="../images/menu01.png" alt="menu01"></a></p>
-    <p class="menu02 hvr-pulse-grow infinite"><a href="../gallery/index.html"><img src="../images/menu02.png" alt="menu02"></a></p>
-    <p class="menu03 hvr-pulse-grow infinite"><a href="../works/index.html"><img src="../images/menu03.png" alt="menu03"></a></p>
-    <p class="menu04 hvr-pulse-grow infinite"><a href="index.html"><img src="../images/menu04.png" alt="menu04"></a></p>
-    </nav>
-        
-    </div>
-    
-    <section>
-    <div class="wrap box">
-    <!--記事-->
-    <h2><img src="images/other.png" alt="other"></h2>
-    
-        <!--グッズ-->
-    <div class="center">
-        <h3>GOODS</h3>
-        <p><img src="images/g02.jpg" alt="g01" ></p>
-        <h4>COMITIA128 Goods</h4>
-        <p>コミティアで頒布した解説本、他グッズです</p>
-        <div class="button"><a href="https://miwasiba.booth.pm/" target="_blank">
-        <p>購入する</p></a>
-        </div>
-    </div>
-    <div class="center">
-        <p><img src="images/g01.jpg" alt="g01" ></p>
-        <h4>Miwashiba tote bag(Halloween ver.)</h4>
-        <p>創作ゲームのトートバッグ（ハロウィーン仕様）です</p>
-        <div class="button"><a href="https://miwasiba.booth.pm/items/1037056" target="_blank">
-        <p>購入する</p></a>
-        </div>
-    </div>
+<%- include('../_object/_component/_head.ejs') %>
 
-    <!--本-->
-    <div class="center">
-    <h3>BOOK</h3>
-        
-        <!--やみなべ-->
-        <p><img src="images/book01.jpg" alt="book01" width="230" height="325"></p>
-        <h4>合同誌「やみなべ」</h4>
-        <p>ブレイクショット!７にて発行した同人誌です（販売終了）</p>
-        <div class="button"><a href="https://kennehenne.booth.pm/items/555540" target="_blank">
-        <p>購入する</p></a>
-        </div>
-    
+<body class="l-basic">
+  <%- include('../_object/_component/_header.ejs') %>
+  <main class="l-basic__main">
+    <div class="l-basic__contents">
+      <div class="l-basic__kv">
+        <%- include('../_object/_component/_kv.ejs') %>
+      </div>
+
+      <section class="c-section">
+        <h2 class="c-section__title">Other</h2>
+        <%- include('../_object/_project/_other.ejs') %>
+      </section>
     </div>
-    <!--記事ここまで-->
-    </div>
-    </section>
-    
-    <!--左下トップアイコン-->
-    <p class="topscroll"><a href="#"><img src="../images/topscroll.png" alt="topscroll"></a></p>
-    
-    <!--フッター-->
-    <footer>
-    <p>Copyright &copy;2017 miwashiiba All Rights Reserved.</p>
-    </footer>
-    
+  </main>
+
+  <div class="l-basic__page-top"><img src="/img/icon_top.svg" alt="" /></div>
+
+  <div class="l-basic__footer">
+    <%- include('../_object/_component/_footer.ejs') %>
+  </div>
+  <%- include('../_object/_component/_script.ejs') %>
 </body>
+
 </html>
