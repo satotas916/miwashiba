@@ -27,9 +27,17 @@
     width: 100%;
   }
   .p-gallery-game__thumbnail {
+    $pt: 10;
     height: 20%;
     box-sizing: border-box;
-    padding: 10px 0;
+    padding: pcpx($pt) 0;
+    @include wide {
+      padding: pcvw($pt) 0;
+    }
+    @include sp {
+      $pt: 8;
+      padding: spvw($pt) 0;
+    }
     .swiper-slide {
       cursor: pointer;
     }

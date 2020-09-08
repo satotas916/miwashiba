@@ -9,8 +9,8 @@
     margin-top: spvw($mt);
   }
   &__text {
-    $mb: 40;
-    $fz: 16;
+    $mb: 24;
+    $fz: 14;
     margin-bottom: pcpx($mb);
     font-size: pcpx($fz);
     line-height: 2;
@@ -19,14 +19,15 @@
       font-size: pcvw($fz);
     }
     @include sp {
-      $mb: 24;
+      $fz: 12;
       margin-bottom: spvw($mb);
       font-size: spvw($fz);
+      line-height: 1.6;
     }
   }
   &__box {
     &:not(:last-child) {
-      $mb: 40;
+      $mb: 60;
       margin-bottom: pcpx($mb);
       @include wide {
         margin-bottom: pcvw($mb);
@@ -61,7 +62,7 @@
       padding-top: pcvw($pt);
     }
     @include sp {
-      $pt: 8;
+      $pt: 16;
       padding-top: spvw($pt);
     }
   }
@@ -75,7 +76,15 @@
       font-size: pcvw($fz);
     }
     @include sp {
+      $fz: 12;
       font-size: spvw($fz);
+      line-height: 1.6;
+    }
+    &:not(:last-child) {
+      @include sp {
+        $mb: 16;
+        margin-bottom: spvw($mb);
+      }
     }
     a {
       color: $link;

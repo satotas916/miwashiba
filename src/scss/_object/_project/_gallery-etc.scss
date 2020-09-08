@@ -1,6 +1,9 @@
 .p-gallery-etc {
   &__container {
     display: flex;
+    @include sp {
+      flex-direction: column;
+    }
   }
   &__picture {
     $w: 430;
@@ -9,6 +12,9 @@
     @include wide {
       width: pcvw($w);
     }
+    @include sp {
+      width: 100%;
+    }
   }
   &__wrap {
     $p: 30;
@@ -16,12 +22,21 @@
     @include wide {
       padding: pcpx($p);
     }
+    @include sp {
+      $mt: 24;
+      margin-top: spvw($mt);
+      padding: 0;
+    }
   }
   &__text {
     $fz: 14;
     font-size: pcpx($fz);
     @include wide {
       font-size: pcvw($fz);
+    }
+    @include sp {
+      $fz: 12;
+      font-size: spvw($fz);
     }
   }
   &__list {
@@ -32,6 +47,12 @@
     @include wide {
       margin: pcvw($m) 0;
       font-size: pcvw($fz);
+    }
+    @include sp {
+      $m: 8;
+      $fz: 12;
+      margin: spvw($m) 0;
+      font-size: spvw($fz);
     }
   }
 }

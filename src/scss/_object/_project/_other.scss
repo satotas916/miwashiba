@@ -16,6 +16,7 @@
         margin-bottom: pcvw($mb);
       }
       @include sp {
+        $mb: 24;
         margin-bottom: spvw($mb);
       }
     }
@@ -44,7 +45,9 @@
       font-size: pcvw($fz);
     }
     @include sp {
+      $mb: 8;
       $fz: 16;
+      margin-bottom: spvw($mb);
       font-size: spvw($fz);
     }
   }
@@ -56,7 +59,9 @@
       font-size: pcvw($fz);
     }
     @include sp {
+      $fz: 12;
       font-size: spvw($fz);
+      line-height: 1.6;
     }
   }
   &__button {
