@@ -1,0 +1,71 @@
+.p-works {
+  $mt: 40;
+  margin-top: pcpx($mt);
+  @include wide {
+    margin-top: pcvw($mt);
+  }
+  @include sp {
+    $mt: 24;
+    margin-top: spvw($mt);
+  }
+  &__box {
+    &:not(:last-child) {
+      $mb: 40;
+      margin-bottom: pcpx($mb);
+      @include wide {
+        margin-bottom: pcvw($mb);
+      }
+      @include sp {
+        $mb: 24;
+        margin-bottom: spvw($mb);
+      }
+    }
+  }
+  &__title {
+    $w: 504;
+    $bdrs: 14;
+    width: pcpx($w);
+    border-radius: pcpx($bdrs);
+    overflow: hidden;
+    @include wide {
+      width: pcvw($w);
+      border-radius: pcvw($bdrs);
+    }
+    @include sp {
+      $bdrs: 6;
+      max-width: spvw($w);
+      width: 100%;
+      border-radius: spvw($bdrs);
+    }
+  }
+  &__list{
+    $pt: 20;
+    padding-top: pcpx($pt);
+    @include wide {
+      padding-top: pcvw($pt);
+    }
+    @include sp {
+      $pt: 8;
+      padding-top: spvw($pt);
+    }
+  }
+  &__item{
+    $fz: 14;
+    font-size: pcpx($fz);
+    line-height: 2;
+    margin-left: 1em;
+    text-indent: -1em;
+    @include wide {
+      font-size: pcvw($fz);
+    }
+    @include sp {
+      font-size: spvw($fz);
+    }
+    a {
+      color: $link;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
