@@ -1,4 +1,6 @@
 import MobileDetect from "mobile-detect";
+import ClickToggle from "@/StandAloneModules/ClickToggle";
+import scrollPageTop from "@/StandAloneModules/ScrollPageTop";
 class GlobalState {
   private static _instance: GlobalState;
   isSP: boolean;
@@ -31,6 +33,8 @@ class GlobalState {
     } else {
       document.body.classList.add("is-pc");
     }
+    ClickToggle.onReady();
+    scrollPageTop.onReady();
   }
   onLoad() {
     console.log("onLoad");

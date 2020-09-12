@@ -92,9 +92,8 @@
     }
     a {
       color: $link;
-      transition: opacity 0.2s ease;
       &:hover {
-        opacity: 0.8;
+        text-decoration: underline;
       }
     }
   }

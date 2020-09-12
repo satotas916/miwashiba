@@ -2,6 +2,7 @@
   const links = [
     {
       year: '2020',
+      class: 'is-active',
       item: [
         { link: 'https://twitter.com/pj_sekai/status/1300629934595956737', text: 'SEGA×Craft Egg/Colorful Palette - 【プロジェクトセカイ カラフルステージ！ feat. 初音ミク　カウントダウンイラスト 】　イラスト描き下ろし' },
         { link: 'https://www.youtube.com/watch?v=KRVFPPYcJUc', text: 'GIA&KIRA - 【 Giga & KIRA - ‘GETCHA!’ ft.初音ミク & GUMI 】　イラスト描き下ろし' },
@@ -221,8 +222,8 @@
   </p>
   <% links.forEach(link => { -%>
   <div class="p-works__box">
-    <h4 class="p-works__title"><img src="/img/works/<%= link.year %>.png" alt="" /></h4>
-    <ul class="p-works__list">
+    <h4 class="p-works__title" data-toggle><img src="/img/works/<%= link.year %>.png" alt="" /></h4>
+    <ul class="p-works__list <%= link.class %>">
       <% link.item.forEach(item => { -%>
       <li class="p-works__item">
         <a href="<%= item.link %>" target="_blank">&#9733;</a><%= item.text %>
