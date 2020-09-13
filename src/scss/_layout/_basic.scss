@@ -37,6 +37,29 @@
       display: none;
     }
   }
+  &__menu {
+    display: none;
+    position: fixed;
+    right: 0;
+    background-color: $black;
+    cursor: pointer;
+    @include sp {
+      display: block;
+      $pt: 9;
+      $pr: 18;
+      $b: 14;
+      bottom: spvw($b);
+      padding: spvw($pt) spvw($pr);
+    }
+    img {
+      @include sp {
+        $w: 37;
+        $h: 45;
+        width: spvw($w);
+        height: spvw($h);
+      }
+    }
+  }
   &__footer {
     $mt: 74;
     margin-top: pcpx($mt);
