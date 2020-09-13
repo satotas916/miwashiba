@@ -3,8 +3,6 @@ const isProduction = process.env.NODE_ENV === "production";
 module.exports = {
   mode: isProduction ? "production" : "development",
   entry: [
-    '@babel/polyfill',
-    'nodelist-foreach-polyfill',
     "./src/ts/index.ts"
   ],
   output: {
