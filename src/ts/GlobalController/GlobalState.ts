@@ -1,6 +1,7 @@
 import MobileDetect from "mobile-detect";
 import ClickToggle from "@/StandAloneModules/ClickToggle";
 import scrollPageTop from "@/StandAloneModules/ScrollPageTop";
+import navigationController from "@/StandAloneModules/NavigationController";
 class GlobalState {
   private static _instance: GlobalState;
   isSP: boolean;
@@ -35,6 +36,7 @@ class GlobalState {
     }
     ClickToggle.onReady();
     scrollPageTop.onReady();
+    navigationController.onReady();
   }
   onLoad() {
     console.log("onLoad");

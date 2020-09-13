@@ -1,0 +1,24 @@
+<%
+  const menu = [
+    { name: 'Top', link: '/' },
+    { name: 'Gallery', link: '/gallery/' },
+    { name: 'Works', link: '/works/' },
+    { name: 'Other', link: '/other/' }
+  ]
+-%>
+<div class="c-menu">
+  <div class="c-menu__container">
+    <div class="c-menu__close" data-close-menu>close</div>
+    <nav class="c-menu__nav">
+      <ul class="c-menu__list">
+        <% menu.forEach(e => { -%>
+        <li class="c-menu__item">
+          <a href="<%= e.link %>" class="c-menu__link">
+            <%= e.name %>
+          </a>
+        </li>
+        <% }); %>
+      </ul>
+    </nav>
+  </div>
+</div>

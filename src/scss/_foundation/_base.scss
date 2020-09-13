@@ -10,6 +10,11 @@ body {
   @include sp {
     width: 100%;
   }
+  &.is-fixed {
+    @include sp {
+      overflow: hidden;
+    }
+  }
 }
 * {
   box-sizing: border-box;

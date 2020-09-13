@@ -1,0 +1,47 @@
+.c-menu {
+  &__container {
+    color: $white;
+    text-align: right;
+    @include sp {
+      $p: 40;
+      padding: spvw($p);
+    }
+  }
+  &__close {
+    display: inline-block;
+    margin-left: auto;
+    font-family: "Cormorant", serif;
+    color: $black;
+    background-color: $white;
+    @include sp {
+      $mb: 30;
+      $p: 10;
+      $fz: 24;
+      $bdrs: 4;
+      margin-bottom: spvw($mb);
+      padding: spvw($p);
+      font-size: spvw($fz);
+      border-radius: spvw($bdrs);
+    }
+  }
+  &__nav {}
+  &__list {
+    text-align: center;
+  }
+  &__item {
+    &:not(:last-child) {
+      @include sp {
+        $mb: 24;
+        margin-bottom: spvw($mb);
+      }
+    }
+  }
+  &__link {
+    font-family: "Cormorant", serif;
+    color: $white;
+    @include sp {
+      $fz: 40;
+      font-size: spvw($fz);
+    }
+  }
+}
