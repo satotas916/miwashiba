@@ -1,14 +1,13 @@
 .c-footer {
   $pt: 20;
-  $pb: 18;
-  padding: pcpx($pt) 0 pcpx($pb);
+  padding: pcpx($pt) 0;
   text-align: center;
   background-color: $black;
   @include wide {
-    padding: pcvw($pt) 0 pcvw($pb);
+    padding: pcvw($pt) 0;
   }
   @include sp {
-    $pt: 26;
+    $pt: 16;
     $pr: 24;
     padding: spvw($pt) spvw($pr);
   }
@@ -22,34 +21,6 @@
     @include sp {
       $fz: 10;
       font-size: spvw($fz);
-    }
-  }
-  &__list {
-    display: none;
-    @include sp {
-      $mt: 17;
-      display: flex;
-      justify-content: center;
-      margin-top: spvw($mt);
-      text-align: left;
-    }
-  }
-  &__item {
-    $mr: 4;
-    $fz: 12;
-    margin: 0 spvw($mr);
-    font-size: spvw($fz);
-    line-height: 1.16;
-    color: $white;
-    &:not(:last-child):after {
-      content: "/";
-    }
-  }
-  &__text {
-    color: $white;
-    transition: opacity 0.2s ease;
-    &:hover {
-      opacity: 0.8;
     }
   }
 }

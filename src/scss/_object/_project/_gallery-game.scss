@@ -7,7 +7,6 @@
   }
   .swiper-button-prev,
   .swiper-button-next {
-    display: none;
     color: $black;
   }
   .swiper-button-prev,
@@ -25,6 +24,8 @@
   .p-gallery-game__slide {
     height: 80%;
     width: 100%;
+    padding: 0 30px;
+    box-sizing: content-box;
   }
   .p-gallery-game__thumbnail {
     $pt: 10;

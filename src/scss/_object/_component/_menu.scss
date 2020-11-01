@@ -3,8 +3,10 @@
     color: $white;
     text-align: right;
     @include sp {
-      $p: 40;
-      padding: spvw($p);
+      $pt: 40;
+      $pr: 40;
+      $pb: 120;
+      padding: spvw($pt) spvw($pr) spvw($pb);
     }
   }
   &__close {

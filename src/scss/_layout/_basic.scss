@@ -1,5 +1,22 @@
 .l-basic {
+  &__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-header;
+    @include sp {
+      position: static;
+    }
+  }
   &__main {
+    $pt: 80;
+    padding-top: pcpx($pt);
+    @include wide {
+      padding-top: pcvw($pt);
+    }
+    @include sp {
+      padding-top: 0;
+    }
   }
   &__contents {
     width: $pc-wrap-w-px;
@@ -48,7 +65,7 @@
       display: block;
       $pt: 9;
       $pr: 18;
-      $b: 14;
+      $b: 24;
       bottom: spvw($b);
       padding: spvw($pt) spvw($pr);
     }

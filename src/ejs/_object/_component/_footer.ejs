@@ -1,18 +1,3 @@
-<%
-  const menu = [
-    { name: 'Top', link: '/' },
-    { name: 'Gallery', link: '/gallery/' },
-    { name: 'Works', link: '/works/' },
-    { name: 'Other', link: '/other/' }
-  ]
--%>
 <footer class="c-footer">
   <p class="c-footer__copy">Copyright &copy;2017 miwashiiba All Rights Reserved.</p>
-  <ul class="c-footer__list">
-    <% menu.forEach(e => { -%>
-    <li class="c-footer__item">
-      <a href="<%= e.link %>" class="c-footer__text"><%= e.name %></a>
-    </li>
-    <% }); %>
-  </ul>
 </footer>
