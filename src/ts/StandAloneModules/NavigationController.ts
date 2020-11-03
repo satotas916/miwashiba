@@ -9,7 +9,7 @@ class NavigationController {
 
   navigationElement: Element | null = null;
   openMenuElement: Element | null = null;
-  closeMenuElement: Element | null = null;
+  closeMenuNodeList: NodeListOf<Element> | null = null;
 
   openMenu() {
     this.navigationElement = document.querySelector('[data-navigation]');
@@ -27,11 +27,13 @@ class NavigationController {
 
   onReady() {
     this.openMenuElement = document.querySelector('[data-open-menu]');
-    this.closeMenuElement = document.querySelector('[data-close-menu]');
+    this.closeMenuNodeList = document.querySelectorAll('[data-close-menu]');
     if(!this.openMenuElement) return
-    if(!this.closeMenuElement) return
+    if(!this.closeMenuNodeList) return
     this.openMenuElement.addEventListener('click', this.openMenu)
-    this.closeMenuElement.addEventListener('click', this.closeMenu)
+    this.closeMenuNodeList.forEach(el => {
+      el.addEventListener('click', this.closeMenu)
+    })
   }
 }
 

@@ -71,32 +71,23 @@
     $pt: 10;
     $pr: 20;
     $fz: 12;
-    $bdrs: 4;
     display: inline-block;
     margin-top: pcpx($mt);
     padding: pcpx($pt) pcpx($pr);
     font-size: pcpx($fz);
-    color: $white;
-    border-radius: pcpx($bdrs);
-    background-color: $black;
+    color: $black;
     border: 1px solid $black;
     transition: background-color 0.2s ease, color 0.2s ease;
     @include wide {
       margin-top: pcvw($mt);
       padding: pcvw($pt) pcvw($pr);
       font-size: pcvw($fz);
-      border-radius: pcvw($bdrs);
     }
     @include sp {
       $mt: 8;
       margin-top: spvw($mt);
       padding: spvw($pt) spvw($pr);
       font-size: spvw($fz);
-      border-radius: spvw($bdrs);
-    }
-    &:hover {
-      color: $black;
-      background-color: $white;
     }
   }
 }

@@ -10,47 +10,51 @@
 -%>
 <div class="p-gallery-game c-section__box">
   <h3 class="c-section__sub-title">Game</h3>
-  <div class="p-gallery-game__slide swiper-container">
-    <div class="swiper-wrapper">
-      <% slide.forEach(e => { -%>
-      <div class="swiper-slide">
-        <div class="c-game-box">
-          <a class="c-game-box__picture" href="<%= e.link %>" target="_blank">
-            <img src="<%= e.img %>" alt="<%= e.name %>" width="325" height="244" />
-          </a>
-          <div class="c-game-box__wrap">
-            <h4 class="c-game-box__title"><%= e.name %></h4>
-            <p class="c-game-box__text">
-              <% if(e.name === 'かおなしのダブル') { -%>
-                謎解きADVです。<br>
-                <span class="emphasis">※更新中</span>
-              <% } else if(e.name === '肖死あかし') { -%>
-                ホラー要素アリのオカルトミステリーノベルです。<br>
-                <span class="emphasis">※更新中</span>
-              <% } else if(e.name === '1BeatHeart') { -%>
-                過去作「1bitHeart」のスピンオフ作品です。<br>
-                <span class="emphasis">※前作の重大なネタバレを含みます。</span>
-              <% } else if(e.name === '1bitHeart') { -%>
-                友達を作りつつ、ついでに街の事件も解決していく、<br>
-                そんなゲームです。<br>
-                <a href="https://store.steampowered.com/app/618720/1bitHeart/" target="_blank">Steam</a>でも配信されています。
-              <% } else if(e.name === 'LiEat') { -%>
-                詐欺師と、嘘喰いドラゴンのお話 全3話<br>
-                <a href="https://store.steampowered.com/app/373770/LiEat/" target="_blank">Steam</a>でも配信されています。
-              <% } else if(e.name === 'Alicemare') { -%>
-                童話、絵本をモチーフにしたホラー風な<br>
-                探索系ゲームです。<br>
-                <a href="https://store.steampowered.com/app/524850/Alicemare/" target="_blank">Steam</a>でも配信されています。
-              <% } -%>
-            </p>
-            <a class="c-game-box__button" href="<%= e.link %>" target="_blank">公式サイト</a>
+  <div class="p-gallery-game__wrap">
+    <div class="p-gallery-game__slide swiper-container">
+      <div class="swiper-wrapper">
+        <% slide.forEach(e => { -%>
+        <div class="swiper-slide">
+          <div class="c-game-box">
+            <a class="c-game-box__picture" href="<%= e.link %>" target="_blank">
+              <img src="<%= e.img %>" alt="<%= e.name %>" width="325" height="244" />
+            </a>
+            <div class="c-game-box__wrap">
+              <h4 class="c-game-box__title"><%= e.name %></h4>
+              <p class="c-game-box__text">
+                <% if(e.name === 'かおなしのダブル') { -%>
+                  謎解きADVです。<br>
+                  <span class="emphasis">※更新中</span>
+                <% } else if(e.name === '肖死あかし') { -%>
+                  ホラー要素アリのオカルトミステリーノベルです。<br>
+                  <span class="emphasis">※更新中</span>
+                <% } else if(e.name === '1BeatHeart') { -%>
+                  過去作「1bitHeart」のスピンオフ作品です。<br>
+                  <span class="emphasis">※前作の重大なネタバレを含みます。</span>
+                <% } else if(e.name === '1bitHeart') { -%>
+                  友達を作りつつ、ついでに街の事件も解決していく、<br>
+                  そんなゲームです。<br>
+                  <a href="https://store.steampowered.com/app/618720/1bitHeart/" target="_blank">Steam</a>でも配信されています。
+                <% } else if(e.name === 'LiEat') { -%>
+                  詐欺師と、嘘喰いドラゴンのお話 全3話<br>
+                  <a href="https://store.steampowered.com/app/373770/LiEat/" target="_blank">Steam</a>でも配信されています。
+                <% } else if(e.name === 'Alicemare') { -%>
+                  童話、絵本をモチーフにしたホラー風な<br>
+                  探索系ゲームです。<br>
+                  <a href="https://store.steampowered.com/app/524850/Alicemare/" target="_blank">Steam</a>でも配信されています。
+                <% } -%>
+              </p>
+              <a class="c-game-box__button" href="<%= e.link %>" target="_blank">公式サイト</a>
+            </div>
           </div>
         </div>
+        <% }); %>
       </div>
-      <% }); %>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="p-gallery-game__prev"></div>
+    <div class="p-gallery-game__next"></div>
   </div>
   <div class="p-gallery-game__thumbnail swiper-container">
     <div class="swiper-wrapper">

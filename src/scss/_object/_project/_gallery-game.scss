@@ -1,33 +1,54 @@
 .p-gallery-game {
-  .swiper-container {
-    width: 100%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
+  &__wrap {
+    position: relative;
   }
-  .swiper-button-prev,
-  .swiper-button-next {
-    color: $black;
+  &__slide {
+    $w: 740;
+    width: pcpx($w);
+    height: 100%;
+    @include wide {
+      width: pcvw($w);
+    }
+    @include sp {
+      width: 100%;
+    }
+    .swiper-button-prev,
+    .swiper-container-rtl .swiper-button-next,
+    .swiper-button-next,
+    .swiper-container-rtl .swiper-button-prev {
+      display: none;
+    }
   }
-  .swiper-button-prev,
-  .swiper-container-rtl .swiper-button-next {
+  &__prev,
+  &__next {
+    $fz: 34;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    @include sp {
+      display: none;
+    }
+    &::after {
+      content: 'prev';
+      font-family: 'swiper-icons';
+      font-size: pcpx($fz);
+      color: $black;
+      @include wide {
+        font-size: pcvw($fz);
+      }
+    }
+  }
+  &__prev {
     left: 0;
   }
-  .swiper-button-next,
-  .swiper-container-rtl .swiper-button-prev {
+  &__next {
     right: 0;
+    &::after {
+      content: 'next';
+    }
   }
-  .swiper-slide {
-    background-size: cover;
-    background-position: center;
-  }
-  .p-gallery-game__slide {
-    height: 80%;
-    width: 100%;
-    padding: 0 30px;
-    box-sizing: content-box;
-  }
-  .p-gallery-game__thumbnail {
+  &__thumbnail {
     $pt: 10;
     height: 20%;
     box-sizing: border-box;
@@ -36,18 +57,15 @@
       padding: pcvw($pt) 0;
     }
     @include sp {
-      $pt: 8;
-      padding: spvw($pt) 0;
+      display: none;
     }
     .swiper-slide {
       cursor: pointer;
+      height: 100%;
+      opacity: 0.4;
     }
-  }
-  .p-gallery-game__thumbnail .swiper-slide {
-    height: 100%;
-    opacity: 0.4;
-  }
-  .p-gallery-game__thumbnail .swiper-slide-thumb-active {
-    opacity: 1;
+    .swiper-slide-thumb-active {
+      opacity: 1;
+    }
   }
 }
