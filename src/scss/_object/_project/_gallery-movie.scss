@@ -20,13 +20,13 @@
     }
     &::before {
       $h: 210;
-      position: absolute;
       content: '';
       display: block;
+      position: absolute;
       width: 100%;
       height: pcpx($h);
-      background-color: rgba($black, 0.6);
       z-index: 1;
+      background-color: rgba($black, 0.6);
       @include wide {
         height: pcvw($h);
       }
@@ -35,10 +35,17 @@
         height: spvw($h);
       }
     }
+  }
+  &__video {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: center / cover no-repeat;
+    @include sp {
+      width: 100%;
+      height: 100%;
+    }
     iframe {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
       $w: 800;
       $h: 450;
       width: pcpx($w);
@@ -48,9 +55,7 @@
         height: pcvw($h);
       }
       @include sp {
-        $h: 150;
-        width: 100%;
-        height: spvw($h);
+        display: none;
       }
     }
   }
