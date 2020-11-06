@@ -47,6 +47,7 @@
     width: 60px;
     transition: opacity 0.2s ease;
     cursor: pointer;
+    z-index: 700;
     &:hover {
       opacity: 0.8;
     }
