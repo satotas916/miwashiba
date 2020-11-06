@@ -109,7 +109,10 @@
           <div class="p-gallery-movie c-section__box">
   <h3 class="c-section__sub-title">Movie</h3>
   <div class="p-gallery-movie__contents">
-    <iframe src="https://www.youtube.com/embed/xtKa3EvNEh4?autoplay=1&controls=0&loop=1&controls=0&mute=1&playlist=xtKa3EvNEh4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- background-imageの/vi/ID/0.jpg、iframeのsrc内URL(/embed/ID、playlist=ID)変更で動画差し替え可能 -->
+    <div class="p-gallery-movie__video" style="background-image: url('https://img.youtube.com/vi/xtKa3EvNEh4/0.jpg')">
+      <iframe src="https://www.youtube.com/embed/xtKa3EvNEh4?autoplay=1&controls=0&loop=1&controls=0&mute=1&playlist=xtKa3EvNEh4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
     <ul class="p-gallery-movie__list">
       <li class="p-gallery-movie__item">
         <a class="p-gallery-movie__link" href="https://www.nicovideo.jp/user/21427527" target="_blank">niconico</a>
