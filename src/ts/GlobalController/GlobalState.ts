@@ -1,7 +1,8 @@
 import MobileDetect from "mobile-detect";
-import ClickToggle from "@/StandAloneModules/ClickToggle";
+import clickToggle from "@/StandAloneModules/ClickToggle";
 import scrollPageTop from "@/StandAloneModules/ScrollPageTop";
 import navigationController from "@/StandAloneModules/NavigationController";
+import headerPositionControl from "@/StandAloneModules/HeaderPositionControl";
 class GlobalState {
   private static _instance: GlobalState;
   isSP: boolean;
@@ -13,6 +14,8 @@ class GlobalState {
   oldWindowWidth = window.innerWidth;
   innerHeight = window.innerHeight;
   innerWidth = window.innerWidth;
+  scrollY = window.scrollY;
+  scrollX = window.scrollX;
   private constructor() {
     const mt = new MobileDetect(window.navigator.userAgent);
     this.isSP = !!(!mt.tablet() && mt.mobile());
@@ -34,7 +37,7 @@ class GlobalState {
     } else {
       document.body.classList.add("is-pc");
     }
-    ClickToggle.onReady();
+    clickToggle.onReady();
     scrollPageTop.onReady();
     navigationController.onReady();
   }
@@ -47,6 +50,13 @@ class GlobalState {
     this.innerWidth = window.innerWidth;
     this.oldPosX = window.pageXOffset;
     this.oldPosY = window.pageYOffset;
+  }
+  onScroll() {
+    console.log("onScroll");
+    this.scrollY = window.scrollY;
+    this.scrollX = window.scrollX;
+    headerPositionControl.onScroll();
+    scrollPageTop.onScroll();
   }
 }
 const globalState = GlobalState.instance;

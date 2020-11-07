@@ -11,3 +11,11 @@ window.addEventListener("load", async function () {
 window.addEventListener("resize", async function () {
   globalState.onResize();
 });
+
+window.requestAnimationFrame(scrollEvent);
+
+function scrollEvent () {
+  window.addEventListener("scroll", async function() {
+    globalState.onScroll();
+  })
+}

@@ -1,3 +1,5 @@
+import globalState from "@/GlobalController/GlobalState";
+
 class ScrollPageTop {
   private static _instance: ScrollPageTop
   public static get instance(): ScrollPageTop {
@@ -10,17 +12,20 @@ class ScrollPageTop {
   pageTopElement: Element | null = null;
 
   onScroll() {
+    if(!this.pageTopElement) return
+    this.pageTopElement.addEventListener('click', this.backToTop);
+  }
+
+  backToTop() {
     window.scrollTo({
       top: 0,
-      left: 0,
+      left: globalState.scrollX,
       behavior: 'smooth'
     });
   }
 
   onReady() {
     this.pageTopElement = document.querySelector('[data-page-top]');
-    if(!this.pageTopElement) return
-    this.pageTopElement.addEventListener('click', this.onScroll);
   }
 }
 
