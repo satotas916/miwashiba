@@ -23,6 +23,8 @@
       content: '';
       display: block;
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: pcpx($h);
       z-index: 1;
@@ -39,6 +41,7 @@
   &__video {
     position: absolute;
     top: 50%;
+    left: 0;
     transform: translateY(-50%);
     background: center / cover no-repeat;
     @include sp {

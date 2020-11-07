@@ -10,6 +10,7 @@
   }
   &__main {
     $pt: 80;
+    display: block;
     padding-top: pcpx($pt);
     @include wide {
       padding-top: pcvw($pt);
