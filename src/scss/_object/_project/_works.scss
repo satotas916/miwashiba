@@ -24,6 +24,12 @@
       font-size: spvw($fz);
       line-height: 1.6;
     }
+    a {
+      color: $link;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   &__box {
     &:not(:last-child) {
